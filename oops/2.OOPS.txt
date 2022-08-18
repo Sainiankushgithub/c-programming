@@ -1,0 +1,72 @@
+// ** CONSTRUCTOR TYPES -- DEFAULT, PARAMERTERIZED,COPY **DESTRUCTOR
+#include<bits/stdc++.h>
+using namespace std;
+class car
+{
+    private:
+    string car_name;
+    string model_name;
+    string fuel_type;
+    float mileage;
+    double price;
+    public:
+    // DEFAULT CONSTRUCTOR
+    car()
+    {
+        cout<<"Default constructor"<<endl;
+       car_name="MERCEDES";
+        model_name="ALTIS";
+        fuel_type="PETROL";
+        mileage=15.5;
+        price=150000;
+    }
+    //  PARAMETERISED CONSTRUCTOR
+    car(string cname,string mname,string ftype,float m,double p)
+    {
+        cout<<"Paramerterized constructor"<<endl;
+         car_name=cname;
+         model_name=mname;
+        fuel_type=ftype;
+        mileage=m;
+        price=p;
+        
+    }
+    // COPY CONSTRUCTOR
+    car(car &obj)
+    {
+        cout<<"Copy constructor"<<endl;
+         car_name=obj.car_name;
+        model_name=obj.model_name;
+        fuel_type=obj.fuel_type;
+        mileage=obj.mileage;
+        price=obj.price;
+    }
+    void setdata(string cname,string mname,string ftype,float m,double p)
+    {
+        car_name=cname;
+        model_name=mname;
+        fuel_type=ftype;
+        mileage=m;
+        price=p;
+    }
+    void displaydata()
+    {
+        cout<<"Car properties are "<<endl<<endl;
+        cout<<"Car name is "<<car_name<<endl;
+        cout<<"Car model name is "<<model_name<<endl;
+        cout<<"Car fuel type is "<<fuel_type<<endl;
+        cout<<"Car mileage is "<<mileage<<" km/ltr "<<endl;
+        cout<<"Car pric is "<<price<<" lakhs"<<endl<<endl;
+    }
+
+};
+int main()
+{
+    car car1,car2("Toyota","Fortuner","Petrol",10,350000);
+    // car1.setdata("MERCEDES","IDK","DIESEL",25.5,80);
+     car1.displaydata();
+     car2.displaydata();
+     car car3=car1;
+     car3.displaydata();
+    return 0;
+}
