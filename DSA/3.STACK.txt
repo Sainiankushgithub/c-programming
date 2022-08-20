@@ -1,0 +1,83 @@
+// ** STACK OPERATION SIMPLE PUSH AND POP
+#include<bits/stdc++.h>
+using namespace std;
+class mystack
+{
+    private:
+    int top;
+    int arr[5];
+    public:
+    mystack()
+    {
+        top=-1;
+    }
+    bool isEmpty()
+    {
+        if(top==-1)
+        {
+           return true;
+        }
+        else{
+            return false;
+        }
+    }
+    bool isFull()
+    {
+        if(top==4)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    void push(int val)
+    {
+        if(top==4)
+        {
+            cout<<"Push operation is not possible\nbeacuse stack is overflow\n";
+        }
+        else{
+            top++;
+            arr[top]=val;
+        }
+    }
+    int pop()
+    {
+        if(top==-1)
+        {
+            cout<<"Not possible to do pop operation because stack is underflow\n";
+            return -1;
+        }
+        else{
+            int popvalue=arr[top];
+            arr[top]=0;
+            top--;
+            return popvalue;
+        }
+    }
+    void display()
+    {
+        cout<<"Displaying the elements\n";
+        for(int i=0;i<5;i++)
+        {
+          cout<<  arr[i]<<endl;
+        }
+    }
+};
+ int main()
+{
+  mystack obj;
+  obj.push(10);
+  obj.push(20);
+  obj.push(30);
+  obj.push(40);
+  obj.push(50);
+ cout<< " If stack is empty it ll give 1 if not it ll give 0 "<<endl<< obj.isEmpty()<<endl;
+ obj.push(60);
+ obj.display();
+ obj.pop();
+ obj.pop();
+ obj.display();
+    return 0;
+}
