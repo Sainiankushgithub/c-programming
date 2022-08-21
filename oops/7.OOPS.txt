@@ -1,0 +1,54 @@
+// SYNTAX FOR VISIBALITY MODES
+#include<bits/stdc++.h>
+using namespace std;
+//  BASE CLASS
+class Employee
+{
+    public:
+    string name;
+    int age;
+    public:
+     float salary;
+    Employee(string n, int x)
+    {
+        name=n;
+        age=x;
+        salary=40000;
+    }
+    Employee(){}
+    void getdata()
+    {
+        cout<<"Name is "<<name<<endl;
+        cout<<"Age is "<<age<<endl;
+    }
+};
+//  DERIVED CLASS
+class programmer :public Employee
+{
+    public:
+    programmer(string s, int x)
+    {
+        name=s;
+        age=x;
+    }
+    float salary=100000;
+    void getdata()
+    {
+        cout<<"Name is "<<name<<endl;
+        cout<<"Age is "<<age<<endl;
+    }
+   
+};
+int main()
+{
+    Employee e1("ANKUSH",18),e2("Saini",18);
+    programmer p("Sahil",24);
+     e1.getdata();
+    cout<<"Salary is "<<e1.salary<<endl;
+    e2.getdata();
+     cout<<"Salary is "<<e2.salary<<endl;
+     cout<<"salary of sahil is "<<p.salary<<endl;
+     p.getdata();
+
+    return 0;
+}
