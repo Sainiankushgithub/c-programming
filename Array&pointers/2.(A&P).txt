@@ -1,0 +1,35 @@
+//  ** FINDING THE MAXIMUM AND MINIMUM ELEMENT
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int size;
+    cout<<"ENter the size of array \n";
+    cin>>size;
+    int arr[100];
+    cout<<"Enter he number of the element "<<endl;
+    for(int i=1;i<=size;i++)
+    {
+        cin>>arr[i];
+    }
+    int maxno=INT_MIN;
+    int minno=INT_MAX;
+    for(int i=1;i<=size;i++)
+    {
+    //    ** we have two ways to finding the maximum value one through this 
+        if(arr[i]>maxno)
+        {
+            maxno=arr[i];
+        }
+        if(arr[i]<minno)
+        {
+            minno=arr[i];
+        }
+    //     ** another through this
+    // maxno=max(maxno,arr[i]);
+    // minno=min(minno,arr[i]);
+     }
+    cout<<"The maximum value is "<<maxno<<endl;
+    cout<<"The minimum value is "<<minno;
+    return 0;
+}

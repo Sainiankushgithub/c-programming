@@ -1,0 +1,11 @@
+// ** CALCULATING THE ELEMENTS IN AN ARRAY
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[]={23,56,45,34,5675,565,34,2,7,6,98,96,34,22,1342,754,1,3564,6,4,78,9,7,4,34,43,343545,6,766754,345,2532,2423,23,568,2324,3523,234,253,2547,76856,2,2,3,34546,43,3523,44,28};
+    cout<<"Size of int is "<<sizeof(int)<<" bytes "<<endl;
+    cout<<"Sizze of arr[] "<<sizeof(arr)<<" bytes "<<endl;
+    cout<<"Numbers of elements in an array are  "<<sizeof(arr)/sizeof(int)<<endl;
+    return 0;
+}

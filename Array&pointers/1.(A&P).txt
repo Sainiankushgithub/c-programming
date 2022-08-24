@@ -1,0 +1,19 @@
+// ** ASSIGNING THE SIZE USING MARCO
+#include<bits/stdc++.h>
+using namespace std;
+#define n 5
+int main()
+{
+    int arr[n];
+    cout<<"Enter the numbers of a elements\n";
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<"Displaying an array \n";
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<endl;
+    }
+  return 0;
+}
