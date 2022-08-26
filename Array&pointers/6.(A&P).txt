@@ -1,0 +1,42 @@
+// ** SUM OF ROWS AND COLUMN IN MATRIX
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    cout<<"HELLO --\t-- GOOD MORNING\n";
+    int row,column;
+    int sum;
+    cout<<"Enter the number of rows and column\n";
+    cin>>row>>column;
+    int arr[row][column];
+    cout<<"Enter the number of elements for rows :";
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<column;j++)
+        {
+            cin>>arr[i][j];
+        }
+        cout<<"Enter the number of element for next row\n";
+    }
+    cout<<"Displaying the sum of the rows are \n";
+    for(int i=0;i<row;i++)
+    {
+        sum=0;
+        for(int j=0;j<column;j++)
+        {
+            sum=sum+arr[i][j];
+        }
+        cout<<sum<<"\n";
+    }
+    cout<<"Displaying the sum of the columns are\n";
+    for(int i=0;i<row;i++)
+    {
+        sum=0;
+        for(int j=0;j<column;j++)
+        {
+            sum=sum+arr[j][i];
+        }
+        cout<<sum<<" ";
+    }
+    return 0;
+}
