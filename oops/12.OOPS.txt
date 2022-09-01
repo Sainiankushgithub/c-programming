@@ -1,0 +1,51 @@
+/ ** ADDITION  MULTIPLICATION  THROUGH CLASSES
+#include<bits/stdc++.h>
+using namespace std;
+class sum
+{
+    protected:
+    int num1;
+    int num2;
+    public:
+    void setdata(int a, int b)
+    {
+        num1=a;
+        num2=b;
+    }
+    void display()
+    {
+        cout<<"The sum of the two number is "<<num1+num2<<endl;
+    }
+};
+class product
+{
+    private:
+    int num1;
+    int num2;
+    public:
+    void setdata1(int a, int b)
+    {
+        num1=a;
+        num2=b;
+    }
+    void display1()
+    {
+        cout<<"The product of two number is "<<num1*num2;
+    }
+
+};
+int main()
+{
+    sum s;
+    product p;
+   int a, b;
+   cout<<"Enter the first number \n";
+   cin>>a;
+   cout<<"Enter the second number\n";
+   cin>>b;
+   s.setdata(a,b);
+   p.setdata1(a,b);
+    s.display();
+    p.display1();
+    return 0;
+}
