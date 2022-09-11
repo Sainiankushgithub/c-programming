@@ -1,0 +1,26 @@
+// SIMPLE PUSH POP WITH SUM OF ELEMENTS
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int>vec1;
+    int element;
+    int size;
+    int sum=0;
+    cout<<"Enter the size of the vector\n";
+    cin>>size;
+    cout<<"Enter the number of the elements\n";
+    for(int i=1;i<=size;i++)
+    {
+        cin>>element;
+        vec1.push_back(element);
+    }
+    for(auto it=vec1.begin();it!=vec1.end();it++)
+    {
+        vec1.pop_back();
+        sum=sum+*it;
+    }
+    cout<<"The sum of the elements is "<<sum;
+    cout<<"\nSize of the vector is "<<vec1.size();
+    return 0;
+}
