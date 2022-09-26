@@ -1,0 +1,19 @@
+// FINDING THE SUM OF THE THREE DIGIT NUMBER 
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int digit_number;
+    printf("Enter the three digit number\n");
+    scanf("%d",&digit_number);
+    // MODULO OPERATION WITH 10 GIVE THE ONE DIGIT REMINDER 
+    int r1=digit_number%10;
+    // THIS q1 GIVE THE QOUIENT 
+    int q1=digit_number/10;
+    int r2=q1%10;
+    int q2=q1/10;
+    printf("First digit = %d\n Second digit = %d \n Third digit = %d\n",q2,r2,r1);
+    int sum=q2+r2+r1;
+    printf("Sum of the three digit number is %d",sum);
+    return 0;
+}

@@ -1,0 +1,64 @@
+// SIMPLE INTEREST AND COMPOUND INTEREST
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int option;
+    printf("Here what do you want to find \n");
+    printf("Enter ~1 for simple interest\n Enter ~2 for compund interest \n Enter ~3 for clear screen\n");
+    do{
+        printf("Enter the choice\n");
+        scanf("%d",&option);
+        switch(option)
+        {
+            //  SIMPLE INTEREST
+            case 1:
+            {
+     float principle;
+    float rate;
+    float time ;
+    printf("Enter the principle value\n");
+    scanf("%f",&principle);
+     printf("Enter the rate  like 3% , 5%\n");
+    scanf("%f",&rate);
+     printf("Enter the time duration\n");
+    scanf("%f",&time);
+    float simple_interest;
+    simple_interest=(principle*rate*time)/100;
+    printf("The simple interest is : %f",simple_interest);
+    printf("\n");
+    break;
+            }
+            // COMPUND INTEREST
+            case 2:
+            {
+                float principle;
+                float rate;
+                float time;
+                float amount;
+                float compund_interest;
+                 printf("Enter the principle value\n");
+    scanf("%f",&principle);
+     printf("Enter the rate  like 3% , 5%\n");
+    scanf("%f",&rate);
+     printf("Enter the time duration\n");
+    scanf("%f",&time);
+    amount=principle*(pow((1+rate/100),time));
+    compund_interest=amount-principle;
+    printf("The compound interest is: %f",compund_interest);
+    printf("\n");
+    break;
+            }
+            case 3:
+            {
+               system("cls");
+               break;
+            }
+            default :
+            {
+                printf("Invalid choice");
+            }
+        }
+    }while(option!=3);
+    return 0;
+}

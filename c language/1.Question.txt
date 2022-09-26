@@ -1,0 +1,34 @@
+// Calculating the sum of an even natural number
+#include<stdio.h>
+main()
+{
+    int n;
+    int sum=0;
+     int num;
+    printf("Enter the nth element\n");
+    scanf("%d",&n);
+    for(int i=1;i<n;i++)
+    {
+        // ** This one is from 1 to n
+
+       /* if(i%2==0)
+        {
+            sum=sum+i;
+        }*/
+
+        // **  Another way 
+        printf("Enter the  number form one to nth \n");
+        for(int i=0;i<n;i++)
+        {
+            scanf("%d",&num);
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(num%2==0)
+            {
+                sum=sum+num;
+            }
+        }
+    }
+     printf("The sum of an even natural number is :%d ",sum);
+}
