@@ -1,0 +1,19 @@
+// COUNTING THE NUMBER OF DIGIT IN A NUMBER
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int digit;
+    int count=0;
+    printf("Enter any finite number\n");
+    scanf("%d",&digit);
+    while(digit>0)
+    {
+        int r;
+        r=digit%10;
+        digit=digit/10;
+        count++;
+    }
+    printf("The total number of the digit are %d ",count);
+    return 0;
+}
