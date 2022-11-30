@@ -6,7 +6,7 @@ int main()
     int sum=30;
     int count=10;
     double mean;
-    mean =sum/count;
+    mean =(double)sum/count;
     printf("Mean is =%.2f",mean);
 return 0;
 }
