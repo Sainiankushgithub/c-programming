@@ -28,5 +28,29 @@ int main()
         i++;
     }
     printf("Length of the string is %d",count);
+    /***************************************************************/
+    /*SOME FUNCTION IN STRING*/
+    int  var1='M';
+    int  var2='m';
+    if(isupper(var1))
+    {
+        printf("Var1 =|%c| is upper case\n",var1);
+    }
+    else
+    {
+        {
+        printf("Var1 =|%c| is not upper case\n",var1);
+    }
+    }
+    if(isupper(var2))
+    {
+        printf("Var1 =|%c| is upper case\n",var2);
+    }
+    else
+    {
+        {
+        printf("Var1 =|%c| is not upper case\n",var2);
+    }
+    }
 return 0;
 }

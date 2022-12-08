@@ -10,10 +10,10 @@ int main()
     for( i=0;n>0;i++)
     {
         int r=n%2;
-        arr[i];
+        arr[i]=r;
         n=n/2;
     }
-    printf("\nBinary equivalent of  %d ",m);
+    printf("\nBinary equivalent of  %d \n",m);
     for(i--;i>=0;i--)
     {
         printf("%d ",arr[i]);
