@@ -6,7 +6,7 @@ struct student
     int age;
     int roll_no;
     char section[20];
-}ankush,sahil,lavish;
+}ankush,sahil,lavish;//---------- THIS ARE GLOBALLY DEFINED VARIABLE
  /*GLOBALLY DEFINED VARIABLE WHICH CAN PUBLICLY ACCESS*/
  void print();
 int main()

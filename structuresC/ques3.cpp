@@ -6,8 +6,7 @@ struct employee
     int age;
     int salary;
 }e1,e2;
-/*USING A STRUCTURE TAG*/
-int manager()
+int manager()//--------/*USING A STRUCTURE TAG*/
 {
     struct employee manager;
     manager.age=27;
