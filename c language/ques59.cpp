@@ -1,20 +1,18 @@
-#include<stdio.h>
-void display(int arr[])
+#include<bits/stdc++.h>
+using namespace std;
+void fun(int n)
 {
-    for(int i=0;i<10;i++)
+    if(n==0)
     {
-        printf("%d ",arr[i]+20);
+        return;
     }
+    fun(n-1); 
+    cout<<n<<endl;
+    fun(n-1);
+
 }
 int main()
 {
-    int arr[10];
-    printf("Enter the numbers of an elements\n");
-    for(int i=0;i<10;i++)
-    {
-        scanf("%d",&arr[i]);
-    }
-    printf("Displaying your array\n");
-    display(arr);
-    return 0;
+    fun(6);
+return 0;
 }
