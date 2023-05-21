@@ -43,7 +43,22 @@ class Rectangle
         length=l;
         width=b;
     }
+
+    // COPY CONSTRUCTOR
+
+    Rectangle(Rectangle &r)
+    {
+        length=r.length;
+        width=r.width;
+    }
     void display(int length,int width);
+
+    // DESTRUCTOR
+
+    ~Rectangle()
+    {
+        cout<<"Destructor is called\n";
+    }
 };
 void Rectangle::display(int length,int width)
 {
@@ -82,5 +97,9 @@ int main()
     cout<<"Copy constructor\n";
     Rectangle r3=r2;                          // COPY CONSTRUCTOR
     r3.display(r3.length,r3.width);
+
+    // DESTRUCTOR
+
+
 return 0;
 }
