@@ -65,6 +65,24 @@ void Rectangle::display(int length,int width)
     cout<<"Length = "<<length<<endl<<"Width = "<<width<<endl;
 
 }
+
+// ENCAPSULATION 
+
+class Manager
+{
+    private:
+    int x;
+    public:
+    void setData(int n)
+    {
+        x=n;
+    }
+    void getData()
+    {
+        cout<<"x="<<x<<endl;
+    }
+
+};
 int main()
 {
     // CLASS AND OBJECT 
@@ -101,5 +119,15 @@ int main()
     // DESTRUCTOR
 
 
+   //  ENCAPSUALTION 
+
+    cout<<"ENCAPSULATION\n";
+    Manager m;
+    m.setData(20);
+    m.getData();
+
+    // ABSTRACTION 
+
+    
 return 0;
 }
