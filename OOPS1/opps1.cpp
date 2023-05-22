@@ -83,6 +83,20 @@ class Manager
     }
 
 };
+class Parent
+{
+    public:
+    Parent()
+    {
+        cout<<"Parent class "<<endl;
+    }
+};
+class child:public Parent{
+    public:
+    child(){
+        cout<<"child class "<<endl;
+    }
+};
 int main()
 {
     // CLASS AND OBJECT 
@@ -128,6 +142,9 @@ int main()
 
     // ABSTRACTION 
 
-    
+    // TYPES OF INHERITANCE 
+
+    cout<<"SINGLE INHERITANCE \n";
+    child c;
 return 0;
 }
