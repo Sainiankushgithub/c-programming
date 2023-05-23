@@ -146,5 +146,9 @@ int main()
 
     cout<<"SINGLE INHERITANCE \n";
     child c;
+
+    // MUTLILEVEL INHERITANCE
+
+
 return 0;
 }
