@@ -83,18 +83,45 @@ class Manager
     }
 
 };
-class Parent
+class Parent1
 {
     public:
-    Parent()
+    Parent1()
     {
-        cout<<"Parent class "<<endl;
+        cout<<"Parent1 class "<<endl;
     }
 };
-class child:public Parent{
+class child1:public Parent1{
     public:
-    child(){
-        cout<<"child class "<<endl;
+    child1(){
+        cout<<"child1 class "<<endl;
+    }
+};
+
+//  MULTILEVEL INHERITANCE 
+
+class Parent2
+{
+    public:
+    Parent2()
+    {
+        cout<<"Parent class 2\n";
+    }
+};
+class child2:public Parent2
+{
+    public:
+    child2()
+    {
+        cout<<"Child 2 class \n";
+    }
+};
+class grandchild:public child2
+{
+    public:
+    grandchild()
+    {
+        cout<<"Grandchild class \n";
     }
 };
 int main()
@@ -145,10 +172,16 @@ int main()
     // TYPES OF INHERITANCE 
 
     cout<<"SINGLE INHERITANCE \n";
-    child c;
+    child1 c;
 
     // MUTLILEVEL INHERITANCE
 
+    cout<<"MULTILEVEL INHERITANCE\n";
+    grandchild gc;
 
+    // MULTIPLE INHERITANCE 
+
+    cout<<"MULTIPLE INHERITANCE\n";
+    
 return 0;
 }
