@@ -124,6 +124,9 @@ class grandchild:public child2
         cout<<"Grandchild class \n";
     }
 };
+
+// MULTIPLE INHERTIANCE
+
 class Manager1
 {
     public:
