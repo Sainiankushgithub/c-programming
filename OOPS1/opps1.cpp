@@ -124,6 +124,30 @@ class grandchild:public child2
         cout<<"Grandchild class \n";
     }
 };
+class Manager1
+{
+    public:
+    Manager1()
+    {
+        cout<<"Manager 1 class\n";
+    }
+};
+class Manager2 
+{
+    public:
+    Manager2()
+    {
+        cout<<"Manager 2 class \n";
+    }
+};
+class employee1:public Manager1, public Manager2
+{
+    public:
+    employee1()
+    {
+        cout<<"Employee 1 class \n";
+    }
+};
 int main()
 {
     // CLASS AND OBJECT 
@@ -182,6 +206,6 @@ int main()
     // MULTIPLE INHERITANCE 
 
     cout<<"MULTIPLE INHERITANCE\n";
-    
+    employee1 e1;
 return 0;
 }
