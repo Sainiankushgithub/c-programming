@@ -50,6 +50,6 @@ int main()
     {
         cout<<"False\n";
     }
-    cout<<"Sum of your vectors element is "<<sum(v);
+    cout<<"Sum of your vectors element is "<<sum(v)<<endl;
 return 0;
 }
