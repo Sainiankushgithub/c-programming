@@ -10,6 +10,7 @@ void display(vector<int>&v)
     }
     cout<<endl;
 }
+// SUM OF THE VECTORS ELEMENTS 
 int sum(vector<int>&v)
 {
     int sum=0;
