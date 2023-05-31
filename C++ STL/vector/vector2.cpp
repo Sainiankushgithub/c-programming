@@ -1,4 +1,4 @@
-// 
+// INSERT FUNCTION IN VECTOR
 #include<bits/stdc++.h>
 using namespace std;
 void display(vector<int>v)
@@ -33,6 +33,5 @@ int main()
     // INSERT THE MULTIPLE ELEMENT AT THE GIVEN INDEX
     v.insert(v.end()-1,2,50);
     display(v);
-    // 
 return 0;
 }
