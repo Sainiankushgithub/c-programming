@@ -18,6 +18,11 @@ void display(vector<pair<int,string>>&vp)
 }
 void display1(vector<pair<int,string>>&vp)
 {
+    if(vp.size()==0)
+    {
+        cout<<"0\n";
+        return;
+    }
     cout<<"[ ";
     for(int i=0;i<vp.size();i++)
     {
@@ -59,6 +64,9 @@ int main()
     v.erase(v.end());
     display(v);
     cout<<"Displaying only the 0dd pair\n";
+    display1(v);
+    cout<<"Clearing your vector\n";
+    v.clear();
     display1(v);
 return 0;
 }
