@@ -16,6 +16,24 @@ void display(vector<pair<int,string>>&vp)
     cout<<" ]";
     cout<<endl;
 }
+void display1(vector<pair<int,string>>&vp)
+{
+    cout<<"[ ";
+    for(int i=0;i<vp.size();i++)
+    {
+        if(vp[i].first%2!=0)
+        {
+            cout<<"{ ";
+            cout<<vp[i].first<<". "<<vp[i].second<<" }";
+        if(i<vp.size()-1)
+        {
+            cout<<" , ";
+        }
+        }
+    }
+    cout<<" ]";
+    cout<<endl;
+}
 int main()
 {
     vector< pair<int,string>>vp={{1,"APPLE"},{2,"ORANGE"},{3,"MANGO"},{4,"LICHI"}};
@@ -40,5 +58,7 @@ int main()
     cout<<"Erasing your last pair\n";
     v.erase(v.end());
     display(v);
+    cout<<"Displaying only the 0dd pair\n";
+    display1(v);
 return 0;
 }
