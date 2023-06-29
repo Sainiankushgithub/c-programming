@@ -1,4 +1,4 @@
-// BY CODE BEAUTY OOPS 1 ABOUT CLASSES AND OBJECTS
+// BY CODE BEAUTY OOPS 4 ABOUT CONSTRUCTOR
 #include<bits/stdc++.h>
 using namespace std;
 class YouTubechannel
