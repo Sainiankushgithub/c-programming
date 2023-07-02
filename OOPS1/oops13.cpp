@@ -29,19 +29,22 @@
         age=a;
         Email=fname+"."+lname+"@gmail.com";
     }
-    void dipslay();
+    void display();
  };
     void User :: display()
     {
-        
+        cout<<"First name : "<<FirstName<<endl;
+        cout<<"Last name  : "<<LastName<<endl;
+        cout<<"Age        : "<<age<<endl;
+        cout<<"Email      : "<<Email<<endl;
     }
- {
-
- }
  int main()
  {
-    User user1("Ankush ","Saini",19);
+    User user1("Ankush","Saini",19);
     cout<<"Displaying the paramertrised constructor\n";
     user1.display();
+    cout<<"Dispalying the copy constructor \n";
+    User user2=user1;
+    user2.display();
  return 0;
  }
