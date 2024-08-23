@@ -1,0 +1,194 @@
+// ** STACK ALL OPERATION
+#include<bits/stdc++.h>
+using namespace std;
+#define SIZE 100
+class Stack
+{
+    private:
+    int top;
+    int *arr;
+    public:
+    Stack()
+    {
+        top=-1;
+        arr=new int[SIZE];
+    }
+    bool isFull()
+    {
+        if(top==SIZE-1)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    bool isEmpty()
+    {
+        if(top==-1)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    void push(int val)
+    {
+        if(isFull())
+        {
+            cout<<"Stack is overflow\n";
+        }
+        else{
+            top++;
+            arr[top]=val;
+        }
+    }
+    void pop() {
+   if(top<=-1)
+   cout<<"Stack Underflow"<<endl;
+   else {
+      cout<<"The popped element is "<<arr[top] <<endl;
+      top--;
+   }
+}
+    int change(int pos,int val)
+    {
+        if(isEmpty())
+        {
+            cout<<"Changes are not possible because stack is empty\n";
+        }
+        else{
+          return  arr[pos]=val;
+        }
+    }
+    int count()
+    {
+        cout<<"Total number of an element are\n";
+        return (top+1);
+    }
+    int peek(int pos)
+    {
+        if(isEmpty())
+        {
+            cout<<"Stack is empty\n";
+        }
+        else{
+          return arr[pos];
+        }
+    }
+    void display()
+    {
+        if(top>=0)
+        {
+            cout<<"Stack elements are\n";
+            for(int i=top;i>=0;i--)
+            {
+                cout<<arr[i]<<endl;
+            }
+        }
+    }
+
+};
+int main()
+{
+    Stack st;
+    int value,size,option;
+    
+        cout<<"1-for push()"<<endl;
+        cout<<"2-for isEmpty()"<<endl;
+         cout<<"3-for isFull()"<<endl;
+         cout<<"4-for pop()"<<endl;
+         cout<<"5-for peek()"<<endl;
+         cout<<"6-for chnage()"<<endl;
+         cout<<"7-for count()"<<endl;
+         cout<<"8- for display()"<<endl;
+         cout<<"9-for clear screen"<<endl;
+         do{
+            cout<<"Enter the choice\n";
+            cin>>option;
+            switch(option)
+            {
+                case 1:
+                {
+                    cout<<"Enter the size for how many elements you want to take\n";
+                    cin>>size;
+                    cout<<"Enter the values to be pushed in the stack\n";
+                    for(int i=0;i<size;i++)
+                    {
+                       cin>>value;
+                       st.push(value);
+                    }
+                    break;
+                }
+                case 2:
+                {
+                   if(st.isEmpty())
+                   {
+                    cout<<"Stack is empty\n";
+                   }
+                   else 
+                   {
+                    cout<<"Stack is not empty\n";
+                   }
+                   break;
+                }
+                case 3:
+                {
+                    if(st.isFull())
+                    {
+                        cout<<"Stack is full\n";
+                    }
+                    else
+                    {
+                        cout<<"Stack is not full\n";
+                    }
+                }
+                case 4:
+                {
+                    st.pop();
+                    break;
+                }
+                case 5:
+                {
+                    int position;
+                    cout<<"Enter the position\n";
+                    cin>>position;
+                   cout<< st.peek(position)<<endl;
+                    break;
+                }
+                case 6:
+                {
+                int position;
+                int value;
+                cout<<"Enter the position\n";
+                cin>>position;
+                cout<<"Enter the value\n";
+                cin>>value;
+               st.change(position,value);
+                break;
+                }
+                case 7:
+                {
+                  cout<<  st.count()<<endl;
+                    break;
+                }
+                case 8:
+                {
+                    st.display();
+                    break;
+                }
+                case 9:
+                {
+                    system("cls");
+                    break;
+                }
+                default :
+                {
+                    cout<<"Invalid entry\n";
+                }
+            }
+
+    }while(option!=4);
+    return 0;
+}
